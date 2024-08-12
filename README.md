@@ -9,14 +9,15 @@ Update Records: Modify existing records in a table based on a query.
 Delete Records: Remove records from a table based on a query.
 Show Tables: Display the contents of a specific table or all tables in the database.
 Save Database: Manually save the database to a JSON file.
-Installation
+
+## Installation
 Upload the json_db.py file to your MicroPython device using a tool like mpremote, ampy, or your IDE.
 
-bash
-Copy code
+```
 mpremote cp json_db.py :/lib/json_db.py
-How to Use the Library
-1. Initialization
+```
+## How to Use the Library
+### 1. Initialization
 First, you need to initialize the JSONDatabase class, which loads the database from a JSON file. If the file does not exist, it creates an empty database.
 
 ```
@@ -27,7 +28,7 @@ db = JSONDatabase("my_data.json")
 
 ```
 
-2. Insert Records
+### 2. Insert Records
 Use the insert_record method to add a new record to a specific table.
 
 Example:
@@ -42,7 +43,7 @@ This will insert two records into the users table.
 
 
 
-3. Retrieve Records
+### 3. Retrieve Records
 Use the get_records method to fetch records from a table. You can retrieve all records or filter them based on specific criteria.
 
 Retrieve All Records:
@@ -58,10 +59,10 @@ jane_doe = db.get_records("users", {"name": "Jane Doe"})
 print(jane_doe)
 ```
 
-4. Update Records
+### 4. Update Records
 Use the update_record method to modify existing records in a table. You specify the query to find the record and provide the updates.
 
-Example:
+#### Example:
 
 ```
 db.update_record("users", {"id": 1}, {"email": "john.doe@example.com"})
@@ -69,7 +70,7 @@ db.update_record("users", {"id": 1}, {"email": "john.doe@example.com"})
 
 This will update the email of the user with id 1.
 
-5. Delete Records
+### 5. Delete Records
 Use the delete_records method to remove records from a table. You specify the query to find the records to delete.
 
 Example:
@@ -82,7 +83,7 @@ db.delete_records("users", {"id": 2})
 
 This will delete the user with id 2.
 
-6. Show Table Contents
+### 6. Show Table Contents
 Use the show_table method to print the contents of a specific table or all tables in the database.
 
 Show a Specific Table:
@@ -97,19 +98,19 @@ Show All Tables:
 db.show_table()
 
 ```
-7. Save Database
+### 7. Save Database
 Use the save_database method to manually save the current state of the database to the JSON file. This is useful if you've made multiple changes and want to save them all at once.
 
-Example:
+#### Example:
 
 ```
 db.save_database()
 
 ```
-8. Load Database Automatically
+### 8. Load Database Automatically
 The JSONDatabase class automatically loads the database from the JSON file when you initialize it. There's no need to call a separate load function.
 
-Example Usage
+#### Example Usage
 Here's a complete example of using the JSONDatabase library:
 
 ```
@@ -140,11 +141,11 @@ db.save_database()
 
 ```
 
-License
+## License
 This project is licensed under the MIT License.
 
-Contributing
+## Contributing
 Feel free to submit issues or pull requests if you have any improvements or suggestions!
 
-Contact
+## Contact
 For any questions or comments, please reach out at nutdechatorn@gmail.com
