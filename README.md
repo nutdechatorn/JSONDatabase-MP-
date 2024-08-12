@@ -1,6 +1,6 @@
 # JSONDatabase-MP-
 JSONDatabase Library for MicroPython
-The JSONDatabase library is a lightweight, easy-to-use database solution for MicroPython projects. It stores data in JSON format, making it ideal for small-scale projects on microcontrollers like the ESP32-C3.
+The JSONDatabase library is a lightweight, easy-to-use database solution for MicroPython projects. It stores data in JSON format, making it ideal for small-scale projects on microcontrollers like the ESP32.
 
 Features
 Insert Records: Add new records to any table.
